@@ -32,28 +32,29 @@ export default function App(){
   }
 
   let form = <form onSubmit={handleSearch}>
-    <input type="search" placeholder='Enter the name of a place' onChange={getCity} />
-    <input type="submit" value="Search"  />
+    <input type="search" placeholder='Enter the name of a place' className=" searchBar" onChange={getCity} />
+    <input type="submit" value="Search" className="searchButton" />
+    <input type="submit" value="Current" className="searchButton" />
   </form>
 
   if(received){
     return(
-      <div>
+      <div className="App">
         <h1>{weather.city}</h1>
         {form}
       <div>
-        <span> <img src={weather.icon} alt="Weather Icon"/> </span>
-        <span>{weather.temperature}</span>
-        <span>°C</span>
+        <span> <img src={weather.icon} alt="Weather Icon" className="currentWeatherIcon"/> </span>
+        <span className="currentTemp">{weather.temperature}</span>
+        <span className="units">°C</span>
       </div>
       <div className="container">
-      <div className="row">
+      <div className="row temperatureInfo">
       <div className="col">{weather.description}</div>
       <div className="col">Humidity: {weather.humidity}%</div>
       <div className="col">Wind: {weather.wind}km/h</div>
       </div>
       </div>
-      <div className= "container">
+      <div className= "container forecast">
       <div className="row">
         <div className="col">Sat</div>
         <div className="col">Sun</div>
@@ -85,6 +86,6 @@ export default function App(){
         <div>{form}</div>
       )
     }
-    
   }
+  
   

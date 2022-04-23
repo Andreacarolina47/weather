@@ -1,38 +1,77 @@
 .App {
   text-align: center;
+  font-family: "Acme", sans-serif;
+  margin: 0 auto;
+  max-width: 700px;
+  background:radial-gradient(345px at 3.1% 89.3%, rgba(254, 223, 45, 0.46) 0%, rgba(254, 139, 45, 0.46) 31.9%, rgba(255, 24, 220, 0.46) 62%, rgba(24, 145, 255, 0.46) 85.8%);
+  border: 1px solid #070f4e;
+  border-radius: 10px;
+  border-width: 5px;
+ color: #070f4e;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1{
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-weight: 600;
+  font-size: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App form{
+  padding-bottom: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.searchBar{
+  padding: 10px;
+  width: 350px;
+  font-size: 20px;
+  text-align: left;
+  margin-right: 5px;
+  background: radial-gradient(345px at 3.1% 89.3%, rgba(254, 223, 45, 0.46) 0%, rgba(254, 139, 45, 0.46) 31.9%, rgba(255, 24, 220, 0.46) 62%, rgba(24, 145, 255, 0.46) 85.8%);
+  border-color: #070f4e;
 }
 
-.App-link {
-  color: #61dafb;
+.searchButton{
+  padding: 7px;
+  margin-right: 5px;
+  width: 100px;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  background: #C599BE;
+  color: #070f4e;
+  border-color: #070f4e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.currentTemp {
+  font-size: 60px;
+}
+
+.units {
+  position: relative;
+  font-size: 30px;
+  top: -22px;
+}
+
+.currentWeatherIcon {
+  position: relative;
+  top: -22px;
+}
+
+.temperatureInfo {
+  padding-top: 40px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.forecast{
+  font-size: 20px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.forecast img{
+  width: 50px;
 }
