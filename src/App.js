@@ -31,7 +31,7 @@ export default function App(){
     axios.get(url).then(getData);
   }
 
-  let form = <form onSubmit={handleSearch}>
+  let form = <form onSubmit={handleSearch} className="form">
     <input type="search" placeholder='Enter the name of a place' className=" searchBar" onChange={getCity} />
     <input type="submit" value="Search" className="searchButton" />
     <input type="submit" value="Current" className="searchButton" />

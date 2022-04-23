@@ -76,3 +76,17 @@
 .forecast img{
   width: 50px;
 }
+
+.footer{
+  padding-top: 10px;
+  font-family: "Acme", sans-serif;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #070f4e;
+}
+
+.form{
+  margin: 0 auto;
+  text-align: center;
+}
