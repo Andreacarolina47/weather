@@ -56,32 +56,6 @@ export default function App(){
       <div className="col">Wind: {weather.wind}km/h</div>
       </div>
       </div>
-      <div className= "container forecast">
-      <div className="row">
-        <div className="col">Sat</div>
-        <div className="col">Sun</div>
-        <div className="col">Mon</div>
-        <div className="col">Tue</div>
-        <div className="col">Wed</div>
-        <div className="col">Thu</div>  
-      </div>
-      <div className="row">
-        <div className="col"> <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon"/> </div>
-        <div className="col"><img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon"/></div>
-        <div className="col"><img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon"/></div>
-        <div className="col"><img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon"/></div>
-        <div className="col"><img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon"/></div>
-        <div className="col"><img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon"/></div>
-      </div>
-      <div className="row">
-        <div className="col">19°| 12°</div>
-        <div className="col">19°| 12°</div>
-        <div className="col">19°| 12°</div>
-        <div className="col">19°| 12°</div>
-        <div className="col">19°| 12°</div>
-        <div className="col">19°| 12°</div>
-      </div>
-      </div>
       </div>
     );} else{
       return(
