@@ -2,6 +2,7 @@ import './App.css';
 import React, {useState} from "react";
 import axios from "axios";
 import CurrentDate from "./CurrentDate";
+import Temperature from "./Temperature"
 
 export default function App(){
   const [city, setCity]= useState(null);
@@ -45,11 +46,9 @@ export default function App(){
         <h1>{weather.city}</h1>
         {form}
         <CurrentDate date={weather.date}/>
-      <div>
-        <span> <img src={weather.icon} alt="Weather Icon" className="currentWeatherIcon"/> </span>
-        <span className="currentTemp">{weather.temperature}</span>
-        <span className="units">°C</span>
-      </div>
+      
+      <Temperature Temp={weather.temperature} Icon={weather.icon}/>
+      
       <div className="container">
       <div className="row temperatureInfo">
       <div className="col">{weather.description}</div>
