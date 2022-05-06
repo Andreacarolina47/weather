@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from "react";
 import axios from "axios";
+import CurrentDate from "./CurrentDate";
 
 export default function App(){
   const [city, setCity]= useState(null);
@@ -20,6 +21,7 @@ export default function App(){
      description: response.data.weather[0].description,
      humidity: response.data.main.humidity,
      wind: response.data.wind.speed,
+     date: new Date(response.data.dt*1000),
      icon: ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
    });
   }
@@ -32,7 +34,7 @@ export default function App(){
   }
 
   let form = <form onSubmit={handleSearch} className="form">
-    <input type="search" placeholder='Enter the name of a place' className=" searchBar" onChange={getCity} />
+    <input type="search" placeholder='Enter the name of a place' autoFocus="on" className=" searchBar" onChange={getCity} />
     <input type="submit" value="Search" className="searchButton" />
     <input type="submit" value="Current" className="searchButton" />
   </form>
@@ -42,6 +44,7 @@ export default function App(){
       <div className="App">
         <h1>{weather.city}</h1>
         {form}
+        <CurrentDate date={weather.date}/>
       <div>
         <span> <img src={weather.icon} alt="Weather Icon" className="currentWeatherIcon"/> </span>
         <span className="currentTemp">{weather.temperature}</span>
