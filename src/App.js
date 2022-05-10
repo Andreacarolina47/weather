@@ -5,7 +5,7 @@ import CurrentDate from "./CurrentDate";
 import Temperature from "./Temperature"
 
 export default function App(){
-  const [city, setCity]= useState(null);
+  const [city, setCity]= useState("Barcelona");
   const [received, setReceived]= useState(false);
   const [weather, setWeather]= useState(null);
 
@@ -58,9 +58,10 @@ export default function App(){
       </div>
       </div>
     );} else{
-      return(
-        <div>{form}</div>
-      )
+    let apiKey = "02cf53f923b1744f0dbdf803cfd893b1";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(url).then(getData);
+    return("Loading...")  
     }
   }
   
