@@ -24,7 +24,8 @@ export default function App(){
      humidity: response.data.main.humidity,
      wind: response.data.wind.speed,
      date: new Date(response.data.dt*1000),
-     icon: ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+     icon: ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+     coordinates: response.data.coord, 
    });
   }
 
@@ -57,7 +58,7 @@ export default function App(){
       <div className="col">Wind: {weather.wind}km/h</div>
       </div>
       </div>
-      <Forecast  />
+      <Forecast coordinates={weather.coordinates} />
       </div>
     );} else{
     let apiKey = "02cf53f923b1744f0dbdf803cfd893b1";
