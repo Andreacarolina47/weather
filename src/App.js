@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import CurrentDate from "./CurrentDate";
 import Temperature from "./Temperature"
+import Forecast from "./Forecast";
 
 export default function App(){
   const [city, setCity]= useState("Barcelona");
@@ -56,6 +57,7 @@ export default function App(){
       <div className="col">Wind: {weather.wind}km/h</div>
       </div>
       </div>
+      <Forecast  />
       </div>
     );} else{
     let apiKey = "02cf53f923b1744f0dbdf803cfd893b1";

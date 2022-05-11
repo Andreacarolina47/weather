@@ -70,13 +70,19 @@
 }
 
 .forecast{
-  font-size: 20px;
-  padding-top: 60px;
-  padding-bottom: 30px;
+  font-size: 20px;  
+}
+
+.forecastTemp{
+  margin-left: 5px;
 }
 
 .forecast img{
   width: 50px;
+}
+
+.forecastContainer{
+  margin-top: 20px;
 }
 
 .footer{
@@ -103,3 +109,4 @@
 .units a{
   text-decoration: none;
 }
+
