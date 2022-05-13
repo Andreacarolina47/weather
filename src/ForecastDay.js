@@ -20,7 +20,7 @@ export default function ForecastDay(props){
     return (
         <div>
             <div className="forecast">{day()}</div>
-                <div className="forecast">{props.icon}</div>
+                <div className="forecast"></div>
                 <div className="forecast">
                     <span className="forecastTemp">{maxTemp()}</span>
                     <span className="forecastTemp">{minTemp()}</span>

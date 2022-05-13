@@ -5,8 +5,8 @@ import CurrentDate from "./CurrentDate";
 import Temperature from "./Temperature"
 import Forecast from "./Forecast";
 
-export default function App(){
-  const [city, setCity]= useState("Barcelona");
+export default function App(props){
+  const [city, setCity]= useState(props.defaultCity);
   const [received, setReceived]= useState(false);
   const [weather, setWeather]= useState(null);
 
@@ -24,8 +24,8 @@ export default function App(){
      humidity: response.data.main.humidity,
      wind: response.data.wind.speed,
      date: new Date(response.data.dt*1000),
-     icon: ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-     coordinates: response.data.coord, 
+     coordinates: response.data.coord,
+     icon: ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`  
    });
   }
 
@@ -58,13 +58,13 @@ export default function App(){
       <div className="col">Wind: {weather.wind}km/h</div>
       </div>
       </div>
-      <Forecast coordinates={weather.coordinates} />
+      <Forecast latitude={weather.coordinates.lat} longitude={weather.coordinates.lon} />
       </div>
     );} else{
     let apiKey = "02cf53f923b1744f0dbdf803cfd893b1";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(getData);
-    return("Loading...")  
+    return ("Loading...")
     }
   }
   
