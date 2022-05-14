@@ -8,11 +8,11 @@ export default function Forecast(props){
     const [loaded, setLoaded]= useState(false);
     const [forecastData, setForecastData]= useState(null);
     
+    
 
     function searchForecast(response){
         setLoaded(true);
-        setForecastData(response.data.daily) 
-        
+        setForecastData(response.data.daily);    
     }
 
 if (loaded){
