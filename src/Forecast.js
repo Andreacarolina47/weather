@@ -25,7 +25,7 @@ if (loaded){
                 if (index < 5){ return (
                 <div className="col forecastContainer" key={index} >
                 <ForecastDay data={dailyForecast}/>
-                </div>);}
+                </div>);} else {return null;}
             })}
             
         </div>
