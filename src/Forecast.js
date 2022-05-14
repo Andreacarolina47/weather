@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect, useLayoutEffect} from "react";
 import axios from "axios";
 import './App.css';
 import ForecastDay from "./ForecastDay";
@@ -8,7 +8,9 @@ export default function Forecast(props){
     const [loaded, setLoaded]= useState(false);
     const [forecastData, setForecastData]= useState(null);
     
-    
+    useEffect(() => {
+        setLoaded(false);
+    },[props.latitude, props.longitude]);
 
     function searchForecast(response){
         setLoaded(true);
