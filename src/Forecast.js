@@ -19,9 +19,13 @@ if (loaded){
     
     return(
         <div className="row">
-            <div className="col forecastContainer" >
-            <ForecastDay data={forecastData[0]}/>
-            </div>
+            {forecastData.map(function(dailyForecast, index){
+                if (index < 5){ return (
+                <div className="col forecastContainer" key={index} >
+                <ForecastDay data={dailyForecast}/>
+                </div>);}
+            })}
+            
         </div>
     )
 } else{   
