@@ -38,7 +38,6 @@ export default function App(props){
   let form = <form onSubmit={handleSearch} className="form">
     <input type="search" placeholder='Enter the name of a place' autoFocus="on" className=" searchBar" onChange={getCity} />
     <input type="submit" value="Search" className="searchButton" />
-    <input type="submit" value="Current" className="searchButton" />
   </form>
 
   if(received){
